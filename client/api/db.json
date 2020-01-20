@@ -1,3 +1,24 @@
 {
-    "streams":[]
+  "streams": [
+    {
+      "title": "dasd",
+      "description": "dasd",
+      "id": 1
+    },
+    {
+      "title": "dasd",
+      "description": "dasd",
+      "id": 2
+    },
+    {
+      "title": "dasd",
+      "description": "dasd",
+      "id": 3
+    },
+    {
+      "title": "dasd",
+      "description": "dasd",
+      "id": 4
+    }
+  ]
 }
