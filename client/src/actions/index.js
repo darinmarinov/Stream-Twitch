@@ -1,9 +1,10 @@
 import {signIn} from './SignInAction'
 import {signOut} from './SignOutAction'
-import {createStream} from './StreamAction'
+import {createStream, fetchStreams} from './StreamAction'
 
 export {
     signIn,
     signOut,
-    createStream
+    createStream,
+    fetchStreams
 }
