@@ -1,6 +1,8 @@
+import _ from 'lodash'
 import React from 'react'
 import { connect } from 'react-redux'
-import { fetchStreams } from '../../actions'
+import { fetchStreams, editStream } from '../../actions'
+import StreamForm from './StreamForm'
 
 class StreamEdit extends React.Component {
 
@@ -9,14 +11,20 @@ class StreamEdit extends React.Component {
     }
 
 
-    render() {
+    onSubmit = (formValues) => {
+         this.props.editStream(this.props.match.params.id, formValues)
+    }
 
+
+    render() {
+        console.log(this.props.stream)
         if (!this.props.stream) {
             return <div>Loading...</div>
         }
         return (
             <>
- 
+               <h3>Edit a Form</h3>
+               <StreamForm initialValues={_.pick(this.props.stream,'title', 'description')} onSubmit={this.onSubmit}/>
             </>
         )
     }
@@ -28,4 +36,4 @@ const mapStateToProps = (state, ownProps) => {
     }
 }
 
-export default connect(mapStateToProps, { fetchStreams })(StreamEdit);
+export default connect(mapStateToProps, { fetchStreams, editStream })(StreamEdit);
