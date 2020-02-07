@@ -7,6 +7,8 @@ import StreamList from './streams/StreamList'
 import StreamShow from './streams/StreamShow'
 import Header from './Header'
 import history from '../history'
+import '../App.css'
+
 
 const App = () => {
   return (
