@@ -22,7 +22,7 @@ class StreamList extends React.Component {
                         ''
                     }
                     <div className='content'>
-                        <div className="header">  <i className='icon camera aligned middle' />{stream.title}</div>
+                        <Link to={`/streams/${stream.id}`} className="header">  <i className='icon camera aligned middle' />{stream.title}</Link>
                         <div className="ui horizontal inverted divider"></div>
                         <div className='text description'>
                             {stream.description}
